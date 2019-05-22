@@ -1,0 +1,20 @@
+{% extends "datageeks/base.html" %}
+{% block content%}
+    <article class="media py-2">
+        <img  class="rounded-circle article-img m-3" src="{{ object.author.profile.image.url }}">
+        <div class="media-body mt-2">
+            <div class="article-metadata">
+                <small><a class="mr-2 text-capitalize" href="#">{{ object.author }}</a></small>
+                <small class="">{{ object.date_objected|date:"F d, Y" }}</small>
+            </div>
+            {% if object.author == user %}
+            <div>
+                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update Post</a>
+                <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete Post</a>
+             </div>
+            {%endif%}
+            <h5 class="article-content">{{ object.title }}</h5>
+            <p class="article-content">{{ object.content }}</p>
+        </div>
+    </article>
+{% endblock content%}
