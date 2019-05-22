@@ -59,7 +59,9 @@ urlpatterns = [
     path('password_change/done/',
          auth_views.PasswordChangeDoneView.as_view(template_name='users/password_change_done.html'),
          name='password_change_done'
-         )
+         ),
+
+    path(r'api/', include('datageeks.api.urls'))
 ]
 
 if settings.DEBUG:

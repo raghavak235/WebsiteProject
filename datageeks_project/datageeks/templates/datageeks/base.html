@@ -11,6 +11,16 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'datageeks/main.css' %}">
     <title>DataGeeks Home</title>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-3828290612962346",
+        enable_page_level_ads: true
+      });
+    </script>
+
+
 </head>
 
 <body>
@@ -32,7 +42,7 @@
                   {% if user.is_authenticated %}
                     <a class="navbar-brand" href="{% url 'post-create' %}">New Post</a>
                     <a class="navbar-brand" href="{% url 'profile' %}">Profile</a>
-                    <a class="navbar-brand" href="{% url 'logout' %}">Logout</a>
+se                    <a class="navbar-brand" href="{% url 'logout' %}">Logout</a>
 
                   {% else %}
                     <a class="navbar-brand" href="{% url 'login' %}">Login</a>
