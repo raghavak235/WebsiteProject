@@ -4,5 +4,5 @@ from datageeks.models import Post
 
 class PostSerializer(ModelSerializer):
     class Meta:
-        model =Post
+        model = Post
         fields = '__all__'
